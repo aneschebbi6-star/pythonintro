@@ -4,7 +4,7 @@ cat = []
 # Charger les dépenses existantes
 ok = True
 try:
-    f = open("expences.txt", "r")
+    f = open("expenses.txt", "r")
     for line in f:
         montant, categorie = line.strip().split(";")
         dep.append(float(montant))
@@ -32,7 +32,7 @@ while ok:
         cat.append(categorie)
 
         # sauvegarder dans le fichier
-        f = open("expences.txt", "a")
+        f = open("expenses.txt", "a")
         f.write(f"{montant};{categorie}\n")
         f.close()
 
